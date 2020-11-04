@@ -29,12 +29,12 @@ BEGIN
 		
 
 		elsif lr_sel ='1'then
-					Genbits:For i in 0 to N-2 Loop
+					Genbits:For i in 0 to N-1 Loop
 					qo(i) <= qo(i+1) ;
 				end Loop;
-				qo(15)<=sdi;
+				qo(N-1)<=sdi;
 		elsif lr_sel ='0'then
-					Genbits1:For i in 1 to N-2 Loop
+					Genbits1:For i in 1 to N-1 Loop
 					qo(i) <= qo(i-1) ;
 				end Loop;
 				qo(0)<=sdi;
